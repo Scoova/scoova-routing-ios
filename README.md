@@ -12,7 +12,7 @@ Or in `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Scoova/scoova-routing-ios.git", from: "1.1.0")
+    .package(url: "https://github.com/Scoova/scoova-routing-ios.git", from: "1.1.2")
 ],
 targets: [
     .target(name: "MyApp", dependencies: [
