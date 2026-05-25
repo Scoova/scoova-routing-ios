@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'ScoovaRouting'
-  s.version          = '1.1.1'
-  s.summary          = 'Valhalla routing client — route, matrix, isochrone, elevation, map-matching, locate, status.'
+  s.version          = '1.1.2'
+  s.summary          = 'the Scoova routing engine routing client — route, matrix, isochrone, elevation, map-matching, locate, status.'
 
   s.description      = <<-DESC
-    Valhalla routing client — route, matrix, isochrone, elevation, map-matching, locate, status.
+    the Scoova routing engine routing client — route, matrix, isochrone, elevation, map-matching, locate, status.
 
     Pure Swift. Uses URLSession + async/await. Auto-detects
     `Bundle.main.bundleIdentifier` for the X-Ios-Bundle-Identifier

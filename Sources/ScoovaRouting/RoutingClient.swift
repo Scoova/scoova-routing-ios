@@ -7,7 +7,7 @@ import FoundationNetworking
 /// own for tests or to share a configured `URLSession` across SDKs.
 public typealias RoutingTransport = @Sendable (URLRequest) async throws -> (Data, Int)
 
-/// Standalone Valhalla routing client for the Scoova routing gateway
+/// Routing client for the Scoova routing gateway
 /// (`api.scoo-va.info/api/v1/routing`).
 ///
 /// Eight endpoints: `route`, `optimizedRoute`, `isochrone`, `matrix`,
@@ -218,7 +218,7 @@ public final class RoutingClient: @unchecked Sendable {
 
 // MARK: - Polyline6 decode
 
-/// Decode a Valhalla polyline6 string into `[LatLng]`.
+/// Decode a polyline (precision 6, Google-format) string into `[LatLng]`.
 public func decodePolyline(_ encoded: String, precision: Int = 6) -> [LatLng] {
     var coords: [LatLng] = []
     let factor = pow(10.0, Double(precision))

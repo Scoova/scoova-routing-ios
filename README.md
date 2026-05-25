@@ -1,6 +1,6 @@
 # ScoovaRouting
 
-Standalone Valhalla routing client for `routing.scoo-va.info`. Swift
+Routing client for `routing.scoo-va.info`. Swift
 package — iOS 15+ / macOS 12+ / tvOS 15+ / watchOS 8+.
 
 ## Install
