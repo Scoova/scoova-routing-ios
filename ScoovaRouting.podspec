@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ScoovaRouting'
-  s.version          = '1.1.2'
+  s.version          = '1.2.0'
   s.summary          = 'the Scoova routing engine routing client — route, matrix, isochrone, elevation, map-matching, locate, status.'
 
   s.description      = <<-DESC
