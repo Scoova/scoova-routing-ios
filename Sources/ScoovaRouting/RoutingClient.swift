@@ -7,7 +7,8 @@ import FoundationNetworking
 /// own for tests or to share a configured `URLSession` across SDKs.
 public typealias RoutingTransport = @Sendable (URLRequest) async throws -> (Data, Int)
 
-/// Standalone Valhalla routing client for `routing.scoo-va.info`.
+/// Standalone Valhalla routing client for the Scoova routing gateway
+/// (`api.scoo-va.info/api/v1/routing`).
 ///
 /// Eight endpoints: `route`, `optimizedRoute`, `isochrone`, `matrix`,
 /// `height` (alias `elevation`), `mapMatch`, `locate`, `status`.
@@ -15,8 +16,8 @@ public typealias RoutingTransport = @Sendable (URLRequest) async throws -> (Data
 /// Pass `locale` once (e.g. `"fr"`, `"ar-EG"`, `"pt-BR"`) and every request
 /// carries it as both the `?locale=` query parameter and the `Accept-Language`
 /// header. Per-call `RouteOptions.locale` / `IsochroneOptions.locale`
-/// overrides. Default `"en"`. Pass `apiKey` when going through the
-/// `api.scoo-va.info` gateway — sent as `X-API-Key` on every request.
+/// overrides. Default `"en"`. Pass `apiKey` — required by the gateway —
+/// sent as `X-API-Key` on every request.
 public final class RoutingClient: @unchecked Sendable {
     private let baseURL: URL
     private let defaultCosting: CostingType
@@ -27,7 +28,7 @@ public final class RoutingClient: @unchecked Sendable {
     private let decoder: JSONDecoder
 
     public init(
-        baseURL: URL = URL(string: "https://routing.scoo-va.info")!,
+        baseURL: URL = URL(string: "https://api.scoo-va.info/api/v1/routing")!,
         defaultCosting: CostingType = .scooter,
         locale: String = "en",
         apiKey: String? = nil,
