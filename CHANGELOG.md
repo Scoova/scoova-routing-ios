@@ -9,8 +9,7 @@ This project follows [Semantic Versioning](https://semver.org/).
 ## 1.1.0 — 2026-05-25
 
 First public release. Standalone Valhalla routing client for
-`routing.scoo-va.info`, extracted from the unified `ScoovaSDK` (now retired
-into `_legacy_unified_sdk_2026-05-25/`).
+`routing.scoo-va.info`.
 
 ### Endpoints (verified parity across all 5 platforms)
 
